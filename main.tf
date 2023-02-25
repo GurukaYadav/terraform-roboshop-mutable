@@ -5,4 +5,11 @@ module "vpc" {
   ENV = var.ENV
 }
 
+terraform {
+  backend "s3"
+}
+
+provider "aws" {
+region = "us-east-1"
+}
 
