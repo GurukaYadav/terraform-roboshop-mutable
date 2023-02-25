@@ -7,10 +7,6 @@ module "vpc" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-sfiles"
-    key    = "terraform/mutable/${var.ENV}/terraform.tfstate"
-    region = "us-east-1"
-  }
 }
 
 provider "aws" {
