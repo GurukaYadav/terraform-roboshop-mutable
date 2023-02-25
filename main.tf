@@ -9,10 +9,3 @@ provider "aws" {
   region = "us-east-1"
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraform-sfiles"
-    key    = "terraform/mutable/${ENV}/terraform.tfstate"
-    region = "us-east-1"
-  }
-}
