@@ -5,7 +5,4 @@ module "vpc" {
   ENV = var.ENV
 }
 
-provider "aws" {
-  region = "us-east-1"
-}
 
