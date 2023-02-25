@@ -12,7 +12,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraform-sfiles"
-    key    = "terraform/mutable/${var.ENV}/terraform.tfstate"
+    key    = "terraform/mutable/${ENV}/terraform.tfstate"
     region = "us-east-1"
   }
 }
