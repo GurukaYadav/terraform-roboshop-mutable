@@ -20,6 +20,7 @@ variable "USER_NAME" {}
 variable "PASSWORD" {}
 variable "PARAMETER_GROUP_NAME" {}
 variable "PORT" {}
+variable "PG_FAMILY" {}
 
 
 
