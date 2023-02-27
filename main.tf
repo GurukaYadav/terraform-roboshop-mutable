@@ -16,17 +16,17 @@ module "rds" {
   source = "github.com/GurukaYadav/tf-module-rds"
   PROJECT = var.PROJECT
   ENV = var.ENV
-  db_name              = var.DB_NAME
-  engine               = var.ENGINE
-  engine_version       = var.ENGINE_VERSION
-  instance_class       = var.INSTANCE_CLASS
-  username             = var.USER_NAME
-  password             = var.PASSWORD
+  DB_NAME              = var.DB_NAME
+  ENGINE               = var.ENGINE
+  ENGINE_VERSION       = var.ENGINE_VERSION
+  INSTANCE_CLASS       = var.INSTANCE_CLASS
+  USER_NAME            = var.USER_NAME
+  PASSWORD             = var.PASSWORD
   parameter_group_name = var.PARAMETER_GROUP_NAME
   VPC_ID = module.VPC.VPC_ID
   PRIVATE_SUBNET_ID = module.VPC.PRIVATE_SUBNET_ID
   PORT = var.PORT
-  PRIVATE_SUBNETS_CIDR = var.PRIVATE_SUBNET_CIDR
+  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   PG_FAMILY = var.PG_FAMILY
 }
 
