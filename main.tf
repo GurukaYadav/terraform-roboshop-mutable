@@ -1,8 +1,11 @@
+PROJECT = var.PROJECT
+ENV = var.ENV
+
 module "vpc" {
   source = "github.com/GurukaYadav/tf-module-vpc"
   VPC_CIDR = var.VPC_CIDR
-  PROJECT = var.PROJECT
-  ENV = var.ENV
+#  PROJECT = var.PROJECT
+#  ENV = var.ENV
   PUBLIC_SUBNETS_CIDR = var.PUBLIC_SUBNETS_CIDR
   PRIVATE_SUBNETS_CIDR = var.PRIVATE_SUBNETS_CIDR
   PUBLIC_SUBNETS_AZ = var.PUBLIC_SUBNETS_AZ
@@ -23,5 +26,6 @@ module "rds" {
   parameter_group_name = var.PARAMETER_GROUP_NAME
   VPC_ID = module.VPC.VPC_ID
   PRIVATE_SUBNET_ID = module.VPC.PRIVATE_SUBNET_ID
+  PORT = var.PORT
 }
 

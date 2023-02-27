@@ -19,6 +19,7 @@ variable "INSTANCE_CLASS" {}
 variable "USER_NAME" {}
 variable "PASSWORD" {}
 variable "PARAMETER_GROUP_NAME" {}
+variable "PORT" {}
 
 
 
