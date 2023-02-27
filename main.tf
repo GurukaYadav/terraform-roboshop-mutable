@@ -12,11 +12,16 @@ module "vpc" {
   DEFAULT_VPC_RT = var.DEFAULT_VPC_RT
 }
 
-terraform {
-  backend "s3" {}
-}
-
-provider "aws" {
-  region = "us-east-1"
+module "rds" {
+  source = "github.com/GurukaYadav/tf-module-rds"
+  db_name              = var.DB_NAME
+  engine               = var.ENGINE
+  engine_version       = var.ENGINE_VERSION
+  instance_class       = var.INSTANCE_CLASS
+  username             = var.USER_NAME
+  password             = var.PASSWORD
+  parameter_group_name = var.PARAMETER_GROUP_NAME
+  VPC_ID = module.VPC.VPC_ID
+  PRIVATE_SUBNET_ID = module.VPC.PRIVATE_SUBNET_ID
 }
 
