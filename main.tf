@@ -1,11 +1,8 @@
-PROJECT = var.PROJECT
-ENV = var.ENV
-
 module "vpc" {
   source = "github.com/GurukaYadav/tf-module-vpc"
   VPC_CIDR = var.VPC_CIDR
-#  PROJECT = var.PROJECT
-#  ENV = var.ENV
+  PROJECT = var.PROJECT
+  ENV = var.ENV
   PUBLIC_SUBNETS_CIDR = var.PUBLIC_SUBNETS_CIDR
   PRIVATE_SUBNETS_CIDR = var.PRIVATE_SUBNETS_CIDR
   PUBLIC_SUBNETS_AZ = var.PUBLIC_SUBNETS_AZ
@@ -17,6 +14,8 @@ module "vpc" {
 
 module "rds" {
   source = "github.com/GurukaYadav/tf-module-rds"
+  PROJECT = var.PROJECT
+  ENV = var.ENV
   db_name              = var.DB_NAME
   engine               = var.ENGINE
   engine_version       = var.ENGINE_VERSION
