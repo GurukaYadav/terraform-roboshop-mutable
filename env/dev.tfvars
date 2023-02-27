@@ -1,5 +1,5 @@
 PROJECT = "roboshop"
-ENV = "dev
+ENV = "dev"
 
 //VPC
 VPC_CIDR = "10.0.0.0/16"
@@ -16,8 +16,8 @@ DB_NAME              = "mydb"
 ENGINE               = "mysql"
 ENGINE_VERSION       = "5.7"
 INSTANCE_CLASS       = "db.t3.micro"
-USER_NAME             = "foo"
+USER_NAME            = "foo"
 PASSWORD             = "foobarbaz"
 PARAMETER_GROUP_NAME = "aws_db_parameter_group.pg.name"
-PORT = "3306"
-PG_FAMILY = "mysql5.6"
+PORT                 = "3306"
+PG_FAMILY            = "mysql5.6"
