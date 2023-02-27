@@ -22,7 +22,7 @@ module "rds" {
   INSTANCE_CLASS       = var.INSTANCE_CLASS
   USER_NAME            = var.USER_NAME
   PASSWORD             = var.PASSWORD
-  parameter_group_name = var.PARAMETER_GROUP_NAME
+  PARAMETER_GROUP_NAME = var.PARAMETER_GROUP_NAME
   VPC_ID = module.VPC.VPC_ID
   PRIVATE_SUBNET_ID = module.VPC.PRIVATE_SUBNET_ID
   PORT = var.PORT
