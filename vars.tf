@@ -3,8 +3,8 @@ variable "ENV" {}
 
 //VPC
 variable "VPC_CIDR" {}
-variable "PUBLIC_SUBNETS_CIDR" {}
-variable "PRIVATE_SUBNETS_CIDR" {}
+variable "PUBLIC_SUBNET_CIDR" {}
+variable "PRIVATE_SUBNET_CIDR" {}
 variable "PUBLIC_SUBNETS_AZ" {}
 variable "PRIVATE_SUBNETS_AZ" {}
 variable "DEFAULT_VPC_ID" {}
