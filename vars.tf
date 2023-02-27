@@ -21,7 +21,7 @@ variable "PASSWORD" {}
 variable "PARAMETER_GROUP_NAME" {}
 variable "PORT" {}
 variable "PG_FAMILY" {}
-variable "PRIVATE_SUBNET_CIDR" {}
+
 
 
 
