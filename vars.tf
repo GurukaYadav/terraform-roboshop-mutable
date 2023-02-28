@@ -18,7 +18,7 @@ variable "ENGINE_VERSION" {}
 variable "RDS_INSTANCE_CLASS" {}
 variable "USER_NAME" {}
 variable "PASSWORD" {}
-variable "PARAMETER_GROUP_NAME" {}
+//variable "PARAMETER_GROUP_NAME" {}
 variable "RDS_PORT" {}
 variable "PG_FAMILY" {}
 
