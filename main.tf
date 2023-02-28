@@ -53,4 +53,6 @@ module "elasticache" {
   PG_FAMILY = var.ELASTICACHE_PG_FAMILY
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   VPC_ID = module.vpc.VPC_ID
+  PROJECT = var.PROJECT
+  ENV = var.ENV
 }
