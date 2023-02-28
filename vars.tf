@@ -15,11 +15,11 @@ variable "DEFAULT_VPC_RT" {}
 variable "DB_NAME" {}
 variable "ENGINE" {}
 variable "ENGINE_VERSION" {}
-variable "INSTANCE_CLASS" {}
+variable "RDS_INSTANCE_CLASS" {}
 variable "USER_NAME" {}
 variable "PASSWORD" {}
 variable "PARAMETER_GROUP_NAME" {}
-variable "PORT" {}
+variable "RDS_PORT" {}
 variable "PG_FAMILY" {}
 
 
