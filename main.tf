@@ -16,7 +16,7 @@ module "rds" {
   source = "github.com/GurukaYadav/tf-module-rds"
   PROJECT = var.PROJECT
   ENV = var.ENV
-  DB_NAME              = var.DB_NAME
+  DB_NAME                  = var.DB_NAME
   RDS_ENGINE               = var.RDS_ENGINE
   RDS_ENGINE_VERSION       = var.RDS_ENGINE_VERSION
   RDS_INSTANCE_CLASS   = var.RDS_INSTANCE_CLASS
@@ -32,7 +32,7 @@ module "docdb" {
   source = "github.com/GurukaYadav/tf-module-docdb"
   PROJECT = var.PROJECT
   ENV = var.ENV
-  ENGINE = var.DOC_DB_ENGINE
+  DOC_DB_ENGINE = var.DOC_DB_ENGINE
   DOC_DB_ENGINE_VERSION = var.DOC_DB_ENGINE_VERSION
   DOC_DB_INSTANCE_CLASS = var.DOC_DB_INSTANCE_CLASS
   DOC_DB_PG_FAMILY      = var.DOC_DB_PG_FAMILY
