@@ -13,14 +13,20 @@ variable "DEFAULT_VPC_RT" {}
 
 //RDS
 variable "DB_NAME" {}
-variable "ENGINE" {}
-variable "ENGINE_VERSION" {}
+variable "RDS_ENGINE" {}
+variable "RDS_ENGINE_VERSION" {}
 variable "RDS_INSTANCE_CLASS" {}
-variable "USER_NAME" {}
-variable "PASSWORD" {}
 //variable "PARAMETER_GROUP_NAME" {}
 variable "RDS_PORT" {}
-variable "PG_FAMILY" {}
+variable "RDS_PG_FAMILY" {}
+
+//DOCDB
+variable "DOC_DB_ENGINE" {}
+variable "DOC_DB_ENGINE_VERSION" {}
+variable "DOC_DB_INSTANCE_CLASS" {}
+variable "DOC_DB_PG_FAMILY" {}
+variable "DOC_DB_PORT" {}
+
 
 
 

@@ -17,16 +17,27 @@ module "rds" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   DB_NAME              = var.DB_NAME
-  ENGINE               = var.ENGINE
-  ENGINE_VERSION       = var.ENGINE_VERSION
+  RDS_ENGINE               = var.RDS_ENGINE
+  RDS_ENGINE_VERSION       = var.RDS_ENGINE_VERSION
   RDS_INSTANCE_CLASS   = var.RDS_INSTANCE_CLASS
-  USER_NAME            = var.USER_NAME
-  PASSWORD             = var.PASSWORD
   //PARAMETER_GROUP_NAME = var.PARAMETER_GROUP_NAME
   VPC_ID = module.vpc.VPC_ID
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   RDS_PORT = var.RDS_PORT
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  PG_FAMILY = var.PG_FAMILY
+  RDS_PG_FAMILY = var.RDS_PG_FAMILY
 }
 
+module "docdb" {
+  source = "github.com/GurukaYadav/tf-module-docdb"
+  PROJECT = var.PROJECT
+  ENV = var.ENV
+  ENGINE = var.DOC_DB_ENGINE
+  DOC_DB_ENGINE_VERSION = var.DOC_DB_ENGINE_VERSION
+  DOC_DB_INSTANCE_CLASS = var.DOC_DB_INSTANCE_CLASS
+  DOC_DB_PG_FAMILY      = var.DOC_DB_PG_FAMILY
+  PRIVATE_SUBNET_ID     = module.vpc.PRIVATE_SUBNET_ID
+  VPC_ID = module.vpc.VPC_ID
+  DOC_DB_PORT  = var.DOC_DB_PORT
+  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+}
