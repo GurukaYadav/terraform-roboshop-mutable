@@ -26,6 +26,7 @@ variable "DOC_DB_ENGINE_VERSION" {}
 variable "DOC_DB_INSTANCE_CLASS" {}
 variable "DOC_DB_PG_FAMILY" {}
 variable "DOC_DB_PORT" {}
+variable "DOC_DB_NO_OF_NODES" {}
 
 //ELASTICACHE
 variable "ELASTICACHE_ENGINE" {}

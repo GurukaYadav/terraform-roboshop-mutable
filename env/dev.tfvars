@@ -26,6 +26,7 @@ DOC_DB_ENGINE_VERSION    = "4.0.0"
 DOC_DB_INSTANCE_CLASS    = "db.t3.medium"
 DOC_DB_PG_FAMILY         = "docdb4.0"
 DOC_DB_PORT              = "27017"
+DOC_DB_NO_OF_NODES       = "1"
 
 //ELASTICACHE
 ELASTICACHE_ENGINE  = "redis"

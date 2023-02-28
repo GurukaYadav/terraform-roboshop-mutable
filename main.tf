@@ -40,6 +40,7 @@ module "docdb" {
   VPC_ID = module.vpc.VPC_ID
   PORT  = var.DOC_DB_PORT
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+  NO_OF_NODES = var.DOC_DB_NO_OF_NODES
 }
 
 module "elasticache" {
