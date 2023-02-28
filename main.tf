@@ -41,3 +41,15 @@ module "docdb" {
   PORT  = var.DOC_DB_PORT
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
 }
+
+module "elasticache" {
+  source = "github.com/GurukaYadav/tf-module-elasticache"
+  ENGINE = var.ELASTICACHE_ENGINE
+  ENGINE_VERSION = var.ELASTICACHE_ENGINE_VERSION
+  INSTANCE_CLASS = var.ELASTICACHE_INSTANCE_CLASS
+  NO_OF_NODES    = var.ELASTICACHE_NO_OF_NODES
+  PORT   = var.ELASTICACHE_PORT
+  PG_FAMILY = var.ELASTICACHE_PG_FAMILY
+  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+  VPC_ID = module.vpc.VPC_ID
+}
