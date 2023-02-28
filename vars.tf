@@ -36,6 +36,9 @@ variable "ELASTICACHE_NO_OF_NODES" {}
 variable "ELASTICACHE_PORT" {}
 variable "ELASTICACHE_PG_FAMILY" {}
 
+//RABBITMQ
+variable "RABBITMQ_INSTANCE_TYPE" {}
+
 
 
 

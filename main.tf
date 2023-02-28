@@ -57,3 +57,8 @@ module "elasticache" {
   PROJECT = var.PROJECT
   ENV = var.ENV
 }
+
+module "rabbitmq" {
+  source = "github.com/GurukaYadav/tf-module-rabbitmq"
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+}
