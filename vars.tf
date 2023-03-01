@@ -39,7 +39,6 @@ variable "ELASTICACHE_PG_FAMILY" {}
 //RABBITMQ
 variable "RABBITMQ_INSTANCE_TYPE" {}
 variable "RABBITMQ_PORT" {}
-variable "PRIVATE_SUBNET_CIDR" {}
 variable "SSH_PORT" {}
 variable "WORKSTATION" {}
 
