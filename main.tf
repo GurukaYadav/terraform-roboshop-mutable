@@ -82,3 +82,13 @@ module "lb" {
   PROJECT = var.PROJECT
   ENV = var.ENV
 }
+
+#module "app" {
+#  INSTANCE_TYPE = var.INSTANCE_TYPE
+#  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+#  PORT = var.PORT
+#  VPC_ID = module.vpc.VPC_ID
+#  SSH_PORT = var.SSH_PORT
+#  WORKSTATION_IP = var.WORKSTATION
+#  COMPONENT = var.APP_COMPONENT
+#}

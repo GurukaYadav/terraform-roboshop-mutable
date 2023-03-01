@@ -46,6 +46,13 @@ variable "WORKSTATION" {}
 variable "PUB_PORT" {}
 variable "PRI_PORT" {}
 
+//APP
+variable "INSTANCE_TYPE" {}
+variable "PORT" {}
+variable "SSH_PORT" {}
+variable "APP_COMPONENT" {}
+
+
 
 
 
