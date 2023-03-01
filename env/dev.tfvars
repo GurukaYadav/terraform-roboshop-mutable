@@ -1,5 +1,6 @@
 PROJECT = "roboshop"
 ENV = "dev"
+WORKSTATION = "3.237.190.63"
 
 //VPC
 VPC_CIDR = "10.0.0.0/16"
@@ -38,3 +39,5 @@ ELASTICACHE_PG_FAMILY = "redis6.x"
 
 //RABBITMQ
 RABBITMQ_INSTANCE_TYPE = "t3.medium"
+RABBITMQ_PORT = "5672"
+SSH_PORT = "22"
