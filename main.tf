@@ -92,4 +92,6 @@ module "app" {
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
   COMPONENT = var.APP_COMPONENT
+  PROJECT = var.PROJECT
+  ENV = var.ENV
 }
