@@ -84,6 +84,7 @@ module "lb" {
 }
 
 module "app" {
+  source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = var.PORT
