@@ -69,5 +69,14 @@ module "rabbitmq" {
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PROJECT = var.PROJECT
   ENV = var.ENV
+}
 
+module "lb" {
+  source = "github.com/GurukaYadav/tf-module-mutable-lb"
+  VPC_ID = module.vpc.VPC_ID
+  PUB_PORT = var.PUB_PORT
+  PRI_PORT = var.PRI_PORT
+  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+  PUBLIC_SUBNET_ID = module.vpc.PUBLIC_SUBNET_ID
 }

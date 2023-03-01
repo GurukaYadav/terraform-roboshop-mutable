@@ -42,6 +42,11 @@ variable "RABBITMQ_PORT" {}
 variable "SSH_PORT" {}
 variable "WORKSTATION" {}
 
+//LOADBALANCERS
+variable "PUB_PORT" {}
+variable "PRI_PORT" {}
+
+
 
 
 
