@@ -50,4 +50,4 @@ PRI_PORT = "80"
 APP_COMPONENT = "frontend"
 INSTANCE_TYPE = "t3.micro"
 PORT = "80"
-SSH_PORT = "22"
+
