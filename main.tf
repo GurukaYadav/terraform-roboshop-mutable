@@ -58,13 +58,16 @@ module "elasticache" {
   ENV = var.ENV
 }
 
-#module "rabbitmq" {
-#  source = "github.com/GurukaYadav/tf-module-rabbitmq"
-#  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
-#  VPC_ID = module.vpc.VPC_ID
-#  PORT = var.RABBITMQ_PORT
-#  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-#  SSH_PORT = var.SSH_PORT
-#  WORKSTATION_IP = var.WORKSTATION
-#
-#}
+module "rabbitmq" {
+  source = "github.com/GurukaYadav/tf-module-rabbitmq"
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  VPC_ID = module.vpc.VPC_ID
+  PORT = var.RABBITMQ_PORT
+  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+  SSH_PORT = var.SSH_PORT
+  WORKSTATION_IP = var.WORKSTATION
+  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+  PROJECT = var.PROJECT
+  ENV = var.ENV
+
+}
