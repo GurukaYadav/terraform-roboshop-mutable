@@ -83,16 +83,16 @@ module "lb" {
   ENV = var.ENV
 }
 
-module "app" {
-  source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
-  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
-  VPC_ID = module.vpc.VPC_ID
-  SSH_PORT = var.SSH_PORT
-  WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
-  PROJECT = var.PROJECT
-  ENV = var.ENV
-  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-}
+#module "app" {
+#  source = "github.com/GurukaYadav/tf-module-mutable-app"
+#  INSTANCE_TYPE = var.INSTANCE_TYPE
+#  PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
+#  PORT = var.PORT
+#  VPC_ID = module.vpc.VPC_ID
+#  SSH_PORT = var.SSH_PORT
+#  WORKSTATION_IP = var.WORKSTATION
+#  COMPONENT = var.APP_COMPONENT
+#  PROJECT = var.PROJECT
+#  ENV = var.ENV
+#  PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+#}
