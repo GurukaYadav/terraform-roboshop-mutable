@@ -48,6 +48,9 @@ SSH_PORT = "22"
 PUB_PORT = "443"
 PRI_PORT = "80"
 
+//APP
+PORT = "80"
+
 
 
 

@@ -48,8 +48,6 @@ variable "PUB_PORT" {}
 variable "PRI_PORT" {}
 
 //APP
-
-variable "PORT" {}
 variable "INSTANCE_COUNT" {}
 
 
