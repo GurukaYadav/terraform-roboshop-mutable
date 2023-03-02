@@ -52,12 +52,11 @@ INSTANCE_TYPE = "t3.micro"
 PORT = "80"
 
 //INSTANCE_COUNT
-variable "INSTANCE_COUNT" {
-  default = {
-    FRONTEND = {
-      COUNT = 1
-    }
+INSTANCE_COUNT= {
+  FRONTEND = {
+    COUNT = 1
   }
 }
+
 
 
