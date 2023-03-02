@@ -50,6 +50,7 @@ variable "PRI_PORT" {}
 variable "INSTANCE_TYPE" {}
 variable "PORT" {}
 variable "APP_COMPONENT" {}
+variable "INSTANCE_COUNT" {}
 
 
 

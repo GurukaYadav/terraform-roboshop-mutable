@@ -51,3 +51,13 @@ APP_COMPONENT = "frontend"
 INSTANCE_TYPE = "t3.micro"
 PORT = "80"
 
+//INSTANCE_COUNT
+variable "INSTANCE_COUNT" {
+  default = {
+    FRONTEND = {
+      COUNT = 1
+    }
+  }
+}
+
+

@@ -83,7 +83,7 @@ module "lb" {
   ENV = var.ENV
 }
 
-module "app" {
+module "FRONTEND" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
@@ -95,4 +95,5 @@ module "app" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
+  INSTANCE_COUNT = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
 }
