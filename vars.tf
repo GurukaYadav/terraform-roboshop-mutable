@@ -48,7 +48,7 @@ variable "PUB_PORT" {}
 variable "PRI_PORT" {}
 
 //APP
-variable "RABBITMQ_INSTANCE_TYPE" {}
+
 variable "PORT" {}
 variable "INSTANCE_COUNT" {}
 
