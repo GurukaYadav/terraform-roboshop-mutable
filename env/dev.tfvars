@@ -51,9 +51,58 @@ APP_COMPONENT = "frontend"
 INSTANCE_TYPE = "t3.micro"
 PORT = "80"
 
+
+//CART
+APP_COMPONENT = "cart"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
+//CATALOGUE
+APP_COMPONENT = "catalogue"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
+//USER
+APP_COMPONENT = "user"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
+//SHIPPING
+APP_COMPONENT = "shipping"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
+//PAYMENT
+APP_COMPONENT = "payment"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
+//DISPATCH
+APP_COMPONENT = "dispatch"
+INSTANCE_TYPE = "t3.micro"
+PORT = "8080"
+
 //INSTANCE_COUNT
 INSTANCE_COUNT= {
   FRONTEND = {
+    COUNT = 1
+  }
+  CART = {
+    COUNT = 1
+  }
+  CATALOGUE = {
+    COUNT = 1
+  }
+  USER = {
+    COUNT = 1
+  }
+  SHIPPING = {
+    COUNT = 1
+  }
+  PAYMENT = {
+    COUNT = 1
+  }
+  DISPATCH = {
     COUNT = 1
   }
 }
