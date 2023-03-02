@@ -10,6 +10,7 @@ module "vpc" {
   DEFAULT_VPC_ID = var.DEFAULT_VPC_ID
   DEFAULT_VPC_CIDR = var.DEFAULT_VPC_CIDR
   DEFAULT_VPC_RT = var.DEFAULT_VPC_RT
+  PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
 }
 
 module "rds" {
@@ -85,13 +86,13 @@ module "lb" {
 
 module "FRONTEND" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "frontend"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -100,13 +101,13 @@ module "FRONTEND" {
 
 module "CART" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "cart"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -115,13 +116,13 @@ module "CART" {
 
 module "CATALOGUE" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "catalogue"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -130,13 +131,13 @@ module "CATALOGUE" {
 
 module "USER" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "user"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -145,13 +146,13 @@ module "USER" {
 
 module "SHIPPING" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "shipping"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -160,13 +161,13 @@ module "SHIPPING" {
 
 module "PAYMENT" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "payment"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
@@ -175,13 +176,13 @@ module "PAYMENT" {
 
 module "DISPATCH" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.INSTANCE_TYPE
+  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = var.PORT
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
-  COMPONENT = var.APP_COMPONENT
+  COMPONENT = "dispatch"
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR

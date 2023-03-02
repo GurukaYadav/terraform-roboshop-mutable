@@ -10,6 +10,7 @@ variable "PRIVATE_SUBNETS_AZ" {}
 variable "DEFAULT_VPC_ID" {}
 variable "DEFAULT_VPC_CIDR" {}
 variable "DEFAULT_VPC_RT" {}
+variable "PRIVATE_HOSTED_ZONE_ID" {}
 
 //RDS
 variable "DB_NAME" {}
@@ -47,9 +48,8 @@ variable "PUB_PORT" {}
 variable "PRI_PORT" {}
 
 //APP
-variable "INSTANCE_TYPE" {}
+variable "RABBITMQ_INSTANCE_TYPE" {}
 variable "PORT" {}
-variable "APP_COMPONENT" {}
 variable "INSTANCE_COUNT" {}
 
 
