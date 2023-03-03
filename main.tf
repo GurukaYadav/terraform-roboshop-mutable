@@ -119,6 +119,7 @@ module "CART" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
 
 module "CATALOGUE" {
@@ -137,6 +138,7 @@ module "CATALOGUE" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
 
 module "USER" {
@@ -155,6 +157,7 @@ module "USER" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
 
 module "SHIPPING" {
@@ -173,6 +176,7 @@ module "SHIPPING" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
 
 module "PAYMENT" {
@@ -191,6 +195,7 @@ module "PAYMENT" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
 
 module "DISPATCH" {
@@ -209,4 +214,5 @@ module "DISPATCH" {
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
+  PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
 }
