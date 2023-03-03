@@ -50,7 +50,7 @@ variable "PUBLIC_HOSTED_ZONE_ID" {}
 
 //APP
 variable "INSTANCE_COUNT" {}
-variable "PRIVATE_HOSTED_ZONE_ID" {}
+
 
 
 
