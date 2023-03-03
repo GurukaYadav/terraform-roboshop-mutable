@@ -51,7 +51,7 @@ variable "PRI_PORT" {}
 variable "INSTANCE_COUNT" {}
 
 
-
+variable "LB_TYPE" {}
 
 
 
