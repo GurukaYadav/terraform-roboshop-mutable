@@ -46,10 +46,9 @@ SSH_PORT = "22"
 
 //LOADBALANCERS
 PUB_PORT = "443"
-PRI_PORT = "80"
+PRI_PORT = "443"
 
-//APP
-PORT = "80"
+
 
 
 
