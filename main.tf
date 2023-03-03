@@ -82,6 +82,7 @@ module "lb" {
   PUBLIC_SUBNET_ID = module.vpc.PUBLIC_SUBNET_ID
   PROJECT = var.PROJECT
   ENV = var.ENV
+  PUBLIC_HOSTED_ZONE_ID = var.PUBLIC_HOSTED_ZONE_ID
 }
 
 module "FRONTEND" {
