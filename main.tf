@@ -43,6 +43,7 @@ module "docdb" {
   PORT  = var.DOC_DB_PORT
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   NO_OF_NODES = var.DOC_DB_NO_OF_NODES
+  WORKSTATION_IP = var.WORKSTATION
 }
 
 module "elasticache" {
