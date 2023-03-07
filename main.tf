@@ -114,7 +114,7 @@ module "CART" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -136,7 +136,7 @@ module "CATALOGUE" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -158,7 +158,7 @@ module "USER" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -180,7 +180,7 @@ module "SHIPPING" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -201,7 +201,7 @@ module "PAYMENT" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -222,7 +222,7 @@ module "DISPATCH" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
