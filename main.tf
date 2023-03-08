@@ -59,7 +59,6 @@ module "elasticache" {
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   PROJECT = var.PROJECT
   ENV = var.ENV
-   
 
 }
 
@@ -175,6 +174,7 @@ module "USER" {
   PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
   PRIVATE_LISTENER_ARN = module.lb.PRIVATE_LISTENER_ARN
   DOCDB_ENDPOINT = module.docdb.DOCDB_ENDPOINT
+  REDIS_ENDPOINT = module.elasticache.REDIS_ENDPOINT
 
 }
 
@@ -241,6 +241,3 @@ module "DISPATCH" {
 
 }
 
-output "REDIS_ENDPOINT" {
-  value =  module.elasticache.REDIS_ENDPOINT
-}
