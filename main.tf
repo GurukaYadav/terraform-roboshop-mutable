@@ -59,7 +59,7 @@ module "elasticache" {
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   PROJECT = var.PROJECT
   ENV = var.ENV
-  REDIS_ENDPOINT = module.elasticache.REDIS_ENDPOINT
+   
 
 }
 
