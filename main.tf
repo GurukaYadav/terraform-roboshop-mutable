@@ -59,6 +59,8 @@ module "elasticache" {
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   PROJECT = var.PROJECT
   ENV = var.ENV
+  REDIS_ENDPOINT = module.elasticache.REDIS_ENDPOINT
+
 }
 
 module "rabbitmq" {
@@ -237,4 +239,8 @@ module "DISPATCH" {
   PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
   PRIVATE_LISTENER_ARN = module.lb.PRIVATE_LISTENER_ARN
 
+}
+
+output "REDIS_ENDPOINT" {
+  value = REDIS_ENDPOINT = module.elasticache.REDIS_ENDPOINT
 }
