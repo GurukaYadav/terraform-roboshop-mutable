@@ -74,6 +74,7 @@ module "rabbitmq" {
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PROJECT = var.PROJECT
   ENV = var.ENV
+  PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
 }
 
 module "lb" {

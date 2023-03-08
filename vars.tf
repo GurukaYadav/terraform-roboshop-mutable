@@ -43,6 +43,7 @@ variable "RABBITMQ_INSTANCE_TYPE" {}
 variable "RABBITMQ_PORT" {}
 variable "SSH_PORT" {}
 variable "WORKSTATION" {}
+variable "PRIVATE_HOSTED_ZONE_ID" {}
 
 //LOADBALANCERS
 variable "PUB_PORT" {}
