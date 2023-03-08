@@ -21,6 +21,7 @@ variable "RDS_INSTANCE_CLASS" {}
 variable "RDS_PORT" {}
 variable "RDS_PG_FAMILY" {}
 
+
 //DOCDB
 variable "DOC_DB_ENGINE" {}
 variable "DOC_DB_ENGINE_VERSION" {}

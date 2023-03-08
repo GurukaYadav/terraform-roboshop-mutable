@@ -27,6 +27,7 @@ module "rds" {
   PORT = var.RDS_PORT
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
   PG_FAMILY = var.RDS_PG_FAMILY
+  WORKSTATION_IP = var.WORKSTATION
 
 }
 
@@ -115,7 +116,7 @@ module "CART" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -138,7 +139,7 @@ module "CATALOGUE" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -160,7 +161,7 @@ module "USER" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -183,7 +184,7 @@ module "SHIPPING" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -197,6 +198,7 @@ module "SHIPPING" {
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
   PRIVATE_LB_DNS_NAME = module.lb.PRIVATE_LB_DNS_NAME
   PRIVATE_LISTENER_ARN = module.lb.PRIVATE_LISTENER_ARN
+  RDS_ENDPOINT = module.rds.RDS_ENDPOINT
 
 }
 
@@ -204,7 +206,7 @@ module "PAYMENT" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -225,7 +227,7 @@ module "DISPATCH" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
