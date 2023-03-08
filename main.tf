@@ -242,5 +242,5 @@ module "DISPATCH" {
 }
 
 output "REDIS_ENDPOINT" {
-  value = REDIS_ENDPOINT = module.elasticache.REDIS_ENDPOINT
+  value =  module.elasticache.REDIS_ENDPOINT
 }
