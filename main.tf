@@ -93,7 +93,7 @@ module "lb" {
 
 module "FRONTEND" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["FRONTEND"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -103,7 +103,7 @@ module "FRONTEND" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = concat(module.vpc.PUBLIC_SUBNET_CIDR, module.vpc.PRIVATE_SUBNET_CIDR)
-  INSTANCE_COUNT = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["FRONTEND"]["COUNT"]
   LB_ARN = module.lb.PUBLIC_LB_ARN
   LB_TYPE = "public"
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -115,7 +115,7 @@ module "FRONTEND" {
 
 module "CART" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["CART"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -125,7 +125,7 @@ module "CART" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["CART"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["CART"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -138,7 +138,7 @@ module "CART" {
 
 module "CATALOGUE" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["CATALOGUE"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -148,7 +148,7 @@ module "CATALOGUE" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["CATALOGUE"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["CATALOGUE"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -160,7 +160,7 @@ module "CATALOGUE" {
 
 module "USER" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["USER"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -170,7 +170,7 @@ module "USER" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["USER"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["USER"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -183,7 +183,7 @@ module "USER" {
 
 module "SHIPPING" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["SHIPPING"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -193,7 +193,7 @@ module "SHIPPING" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["SHIPPING"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["SHIPPING"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -205,7 +205,7 @@ module "SHIPPING" {
 
 module "PAYMENT" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["PAYMENT"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -215,7 +215,7 @@ module "PAYMENT" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["PAYMENT"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["PAYMENT"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID
@@ -226,7 +226,7 @@ module "PAYMENT" {
 
 module "DISPATCH" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
-  INSTANCE_TYPE = var.RABBITMQ_INSTANCE_TYPE
+  INSTANCE_TYPE = var.INSTANCE["DISPATCH"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
   PORT = "80"
   VPC_ID = module.vpc.VPC_ID
@@ -236,7 +236,7 @@ module "DISPATCH" {
   PROJECT = var.PROJECT
   ENV = var.ENV
   PRIVATE_SUBNET_CIDR = var.PRIVATE_SUBNET_CIDR
-  INSTANCE_COUNT = var.INSTANCE_COUNT["DISPATCH"]["COUNT"]
+  INSTANCE_COUNT = var.INSTANCE["DISPATCH"]["COUNT"]
   LB_TYPE = "private"
   LB_ARN = module.lb.PRIVATE_LB_ARN
   PRIVATE_HOSTED_ZONE_ID = var.PRIVATE_HOSTED_ZONE_ID

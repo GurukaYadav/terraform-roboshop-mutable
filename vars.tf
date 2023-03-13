@@ -51,7 +51,8 @@ variable "PRI_PORT" {}
 variable "PUBLIC_HOSTED_ZONE_ID" {}
 
 //APP
-variable "INSTANCE_COUNT" {}
+variable "INSTANCE" {}
+
 
 
 
