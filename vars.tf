@@ -52,6 +52,7 @@ variable "PUBLIC_HOSTED_ZONE_ID" {}
 
 //APP
 variable "INSTANCE" {}
+variable "PROMETHEUS" {}
 
 
 
