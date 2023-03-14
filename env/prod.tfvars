@@ -58,32 +58,32 @@ PRI_PORT = "80"
 //INSTANCE_COUNT
 INSTANCE = {
   FRONTEND = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
   CART = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
 
   }
   CATALOGUE = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
   USER = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
   SHIPPING = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
   PAYMENT = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
   DISPATCH = {
-    COUNT = 1
+    COUNT = 2
     INSTANCE_TYPE = "t3.micro"
   }
 }
