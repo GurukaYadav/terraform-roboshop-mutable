@@ -96,7 +96,7 @@ module "FRONTEND" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["FRONTEND"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "8080"
+  PORT = "80"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
