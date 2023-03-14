@@ -92,10 +92,11 @@ module "lb" {
 }
 
 module "FRONTEND" {
+#  depends_on = [module.CART,module.CATALOGUE,module.USER,module.SHIPPING,module.PAYMENT,module.DISPATCH]
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["FRONTEND"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -118,7 +119,7 @@ module "CART" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["CART"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -142,7 +143,7 @@ module "CATALOGUE" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["CATALOGUE"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -165,7 +166,7 @@ module "USER" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["USER"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -189,7 +190,7 @@ module "SHIPPING" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["SHIPPING"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -212,7 +213,7 @@ module "PAYMENT" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["PAYMENT"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
@@ -234,7 +235,7 @@ module "DISPATCH" {
   source = "github.com/GurukaYadav/tf-module-mutable-app"
   INSTANCE_TYPE = var.INSTANCE["DISPATCH"]["INSTANCE_TYPE"]
   PRIVATE_SUBNET_ID = module.vpc.PRIVATE_SUBNET_ID
-  PORT = "80"
+  PORT = "8080"
   VPC_ID = module.vpc.VPC_ID
   SSH_PORT = var.SSH_PORT
   WORKSTATION_IP = var.WORKSTATION
