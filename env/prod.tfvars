@@ -75,7 +75,7 @@ INSTANCE = {
     INSTANCE_TYPE = "t3.micro"
   }
   SHIPPING = {
-    COUNT = 2
+    COUNT = 3
     INSTANCE_TYPE = "t3.medium"
   }
   PAYMENT = {
