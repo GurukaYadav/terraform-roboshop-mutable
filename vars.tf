@@ -16,7 +16,7 @@ variable "PRIVATE_HOSTED_ZONE_ID" {}
 variable "DB_NAME" {}
 variable "RDS_ENGINE" {}
 variable "RDS_ENGINE_VERSION" {}
-variable "RDS_INSTANCE_CLASS" {}
+variable "RDS_INSTANCE_CLASS" env}
 //variable "PARAMETER_GROUP_NAME" {}
 variable "RDS_PORT" {}
 variable "RDS_PG_FAMILY" {}
